@@ -5,7 +5,7 @@
     border: solid 1px rgba(black, 0.1);
     padding: 1em;
   }
-  a,button {
+  a, input[type='submit'] {
     position: absolute;
     bottom: 1em;
     right: 1em;
@@ -15,6 +15,6 @@
   }
 }
 
-.edit_review {
+.simple_form {
   position: relative;
 }
