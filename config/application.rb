@@ -6,8 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module DeviseTemplateFull
-  class Application < Rails::Application
+module RestaurantsAjaxified
+  class Application < Rails::Application    
     config.generators do |generate|
       generate.assets false
       generate.helper false

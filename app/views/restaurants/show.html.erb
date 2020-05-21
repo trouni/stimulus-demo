@@ -8,12 +8,15 @@
     Be the first to leave a review for <%= @restaurant.name %>
   <% else %>
     <% @restaurant.reviews.each do |review| %>
-      <p><%= review.content %></p>
+      <p id="review-<%= review.id %>">
+        <%= review.content %>
+        <%#= link_to "Delete", review, method: :delete %>
+      </p>
     <% end %>
   <% end %>
 </div>
 
 <%= simple_form_for([ @restaurant, @review ]) do |f| %>
-  <%= f.input :content, as: :text %>
+  <%= f.input :content %>
   <%= f.button :submit %>
 <% end %>
