@@ -1,7 +1,8 @@
-<h1><%= @restaurant.name %> <small><%= @restaurant.address %></small></h1>
-<h2>
+<h1><%= @restaurant.name %></h1>
+<p><small><%= @restaurant.address %></small></p>
+<h3>
   <%= pluralize @restaurant.reviews.size, "review" %>
-</h2>
+</h3>
 
 <div id="reviews">
   <% if @restaurant.reviews.blank? %>
@@ -16,7 +17,8 @@
   <% end %>
 </div>
 
+<h3 class="mt-3">Leave a review</h3>
 <%= simple_form_for([ @restaurant, @review ]) do |f| %>
   <%= f.input :content %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>
