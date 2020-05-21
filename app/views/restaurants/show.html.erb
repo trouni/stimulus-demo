@@ -17,7 +17,7 @@
 </div>
 
 <h3 class="mt-3">Leave a review</h3>
-<%= simple_form_for([ @restaurant, @review ]) do |f| %>
-  <%= f.input :content %>
+<%= simple_form_for [ @restaurant, @review ] do |f| %>
+  <%= f.input :content, label: false %>
   <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>
