@@ -8,7 +8,7 @@
   <% if @restaurant.reviews.blank? %>
     Be the first to leave a review for <%= @restaurant.name %>
   <% else %>
-    <% @restaurant.reviews.each do |review| %>
+    <% @restaurant.reviews.sort.each do |review| %>
       <p>
         <%= review.content %>
       </p>
