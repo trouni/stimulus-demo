@@ -13,7 +13,7 @@
 
       <%# HIDDEN EDIT FORM %>
       <%= simple_form_for review, html: { class: 'hidden', data: { target: 'reviews.editForm' } }, remote: true do |f| %>
-        <%= f.input :content, label: false, input_html: { data: { action: 'keyup->reviews#submitOnEnter' } } %>
+        <%= f.input :content, label: false, input_html: { data: { action: 'keypress->reviews#submitOnEnter' } } %>
         <%= f.button :submit, class: 'btn btn-primary hidden', data: { target: 'reviews.submitBtn' } %>
       <% end %>
 
